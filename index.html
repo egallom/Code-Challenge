@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios 1</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <style>
+      input:required ~ label::before {
+        content: "*";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login">
+      <h3>Formulario de Registro</h3>
+      <form id="registroForm">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            required
+            placeholder="Juan"
+            minlength="5"
+            maxlength="20"
+          />
+
+          <label for="apellido">Apellido</label>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            required
+            placeholder="Perez"
+            minlength="5"
+            maxlength="20"
+          />
+
+          <label for="nacimiento">Fecha de Nacimiento</label>
+          <input
+            type="date"
+            name="nacimiento"
+            id="nacimiento"
+          />
+
+        <input type="reset" value="Resetear" />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
